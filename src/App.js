@@ -1,57 +1,51 @@
-
 import React from "react";
-import Team from './Team'
+//import Todo from './Todo';
 function App(){
-const [ob, setOb] = React.useState([
+var [ob, setOb] = React.useState([
     {
-      teamname:'Mumbai Indians',
-      players:[
-        'Rohit',
-        'surya',
-        'kishan',
-        'bhumra',
-        'david'
-      ]
+      title:'clear bills',
+      status:false
     },
     {
-      teamname:'Royal Challengers Bengaluru',
-      players:[
-        'Faf',
-        'Virat',
-        'DK',
-        'Maxi',
-        'Siraj'
-      ]
+      title:'Moksha School',
+      status:true
     },
     {
-      teamname:'Sunrisers Hyderabad',
-      players:[
-        'Kane Williamson',
-        'Manish',
-        'Bhuvi',
-        'Warner',
-        'Karan'
-      ]
+      title:'Manas Bus Fee',
+      status:false
     },
     {
-      teamname:'Chennai Super Kings',
-      players:[
-        'Dhoni',
-        'Raina',
-        'Jadeja',
-        'Rayudu',
-        'Ben Stokes'
-      ]
-    }
+      title:'Gold Bill',
+      status:false
+    },
+    {
+      title:'Current Bill',
+      status:true
+    },
   ])
+  function addtask()
+{
+  var mew=document.getElementById("task").value;
+  setOb([...ob,{title:mew,status:false}]);
+  }
+  function rem(j){
+    var temp=[...ob];
+    temp.splice(j,1)
+    setOb([...temp])
+  }
   return (
     <div className="my">
-    <h1>welcome to react</h1>
+      <h1>todolist</h1>
+      <input typ="text" id="task"/>
+          <button onClick={addtask}> Add task</button>
     {
-      ob.map((team,i)=>{
-        return(
-          <Team team={team.players} tname={team.teamname}></Team>
-        )
+      ob.map((k,i)=>{
+        return (<div>
+          {
+          <li className="my" style={k.status===true?{backgroundColor:"green"}:{backgroundColor:"red"}}>{k.title}
+          <button onClick={(()=>{rem(i)})}>del</button></li>
+        } 
+        </div>)
       })
     }
     </div>
