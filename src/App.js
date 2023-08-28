@@ -33,6 +33,12 @@ var [ob, setOb] = React.useState([
     temp.splice(j,1)
     setOb([...temp])
   }
+  function don(i){
+    var h=[...ob];
+    h[i].status=!h[i].status
+    setOb([...h])
+
+  }
   return (
     <div className="my">
       <h1>todolist</h1>
@@ -43,7 +49,11 @@ var [ob, setOb] = React.useState([
         return (<div>
           {
           <li className="my" style={k.status===true?{backgroundColor:"green"}:{backgroundColor:"red"}}>{k.title}
-          <button onClick={(()=>{rem(i)})}>del</button></li>
+          <button onClick={(()=>{rem(i)})}>del</button>
+          <button onClick={(()=>{don(i)})}>don</button>
+          <button>undo</button>
+          </li>
+
         } 
         </div>)
       })
