@@ -1,6 +1,11 @@
  .my{
-    border:1px solid black;
-  margin:10px;
+  text-align: center;
+  border:1px solid black;
+  margin:20px;
   padding:10px;
-  background-color: aqua;
+  width: 400px;
 } 
+.kl{
+  text-align: center;
+  color: red;
+}

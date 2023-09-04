@@ -1,12 +1,7 @@
-import React from "react";
-import Count from "./count";
-import Todo from "./Todo";
+import Tours from "./plan";
 function App(){
-return(
-  <div className="my">
-    <Count></Count>g
-    <Todo></Todo>
-  </div>
-)
-}  
+    return(<div>
+        <Tours></Tours>
+    </div>)
+}
 export default App;
