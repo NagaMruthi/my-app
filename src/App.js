@@ -1,10 +1,11 @@
 import React from "react";
 import Count from "./count";
+import Todo from "./Todo";
 function App(){
 return(
   <div className="my">
-    <Count s={200} i={5}></Count>
-    <Count s={500} i={10}></Count>
+    <Count></Count>g
+    <Todo></Todo>
   </div>
 )
 }  

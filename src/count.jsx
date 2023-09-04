@@ -1,19 +1,23 @@
 import React from "react";
-function Count(props){
-    var [d,setD]=React.useState(props.s,props.i)
-    function inc(){
-        
-        setD(d+props.i);
+function Count(){
+    console.log("welcome")
+    var [d,setD]=React.useState(0)
+    function del(){
+        console.log("hello")
+        setD(d+1);
     }
-    function dec(){
-        setD(d-+props.i);
+    function led(){
+        console.log("hello")
+        setD(d-1);
     }
     return(
         <div className="my">
             <h1>count{d}</h1>
-                <button  onClick={()=>{inc()}}>increment</button>
-                <button  onClick={()=>{dec()}}>decrement</button>
+            
+                <button  onClick={()=>{del()}}>increment</button>
+                <button  onClick={()=>{led()}}>decrement</button>
         </div>
+        
     )
 }
-export default Count
+export default Count;
