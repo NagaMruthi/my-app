@@ -1,7 +1,8 @@
+import Accordion from "./plan";
 import Tours from "./plan";
 function App(){
     return(<div>
-        <Tours></Tours>
+        <Accordion></Accordion>
     </div>)
 }
 export default App;
