@@ -1,11 +1,1 @@
- .my{
-  text-align: center;
-  border:1px solid black;
-  margin:20px;
-  padding:10px;
-  width: 400px;
-} 
-.kl{
-  text-align: center;
-  color: red;
-}
+ @import url("../node_modules/bootstrap/dist/css/bootstrap-grid.min.css");
