@@ -1,39 +1,43 @@
-import ReactDOM from 'react-dom/client';
+ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Country from './country';
-import Count from './detaile';
 import reportWebVitals from './reportWebVitals';
 import {
     createBrowserRouter,
     RouterProvider,
   } 
   from "react-router-dom";
-import Abc from './course';
-  const router = createBrowserRouter([
+  import Home from './home';
+import Country from './country';
+import Contact from './contact';
+import Aboutus from './aboutus';
+import Forms from './formik';
+  const router = createBrowserRouter
+  ( [{
+    path:"/",
+    element:<App></App>
+  },
     {
-      path:"/",
-      element:<App></App>,
-      children:[
-   
-    {
-      path:"/jk",
-      element:<Abc></Abc>,
-    },
+      path:"/form",
+      element:<Forms></Forms> ,   
+     },
+      
+      {
+        path:"/home",
+        element:<Home></Home>
+      } ,
+      {
+        path:"/contact",
+        element:<Contact></Contact>
+      } ,
       {
         path:"/country",
-        element:<Country></Country>,
-        children:[{
-        path:"/country/detaile/:cname",
-        element:<Count></Count>,
-        }]
-      },]
-      
-    },
-  
-    
-  
-]);
+        element:<Country></Country>
+      } ,
+      {
+        path:"/aboutus",
+        element:<Aboutus></Aboutus>
+    }]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

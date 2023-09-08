@@ -1,21 +1,19 @@
 import { Link, Outlet } from "react-router-dom";
-import Country from "./country";
-import Count from "./detaile";
+import React from "react";
 function App(){
     return(
-  <div>
-    <div style={{textAlign:"center"}}>
-        <h1><Link to="/">Welcome to my project</Link></h1>
-      </div>
-        <div style={{border:"2px solid",padding:"10px",margin:"3px"}}>
-        <Link to = "jk">numbers</Link>
-        <div style={{border:"2px solid red",padding:"10px",margin:"3px"}} className="d-flex">
-       <Link to="/country">Countries</Link>
-       <Outlet></Outlet>      
-      </div>
+  <div style={{border:"2px solid "}}>
+    <div style={{border:"2px solid red", margin:"10px"}}>
+    <Link to="/">welcome</Link>&nbsp;&nbsp;
     </div>
+     &nbsp;&nbsp;
+     <Link to="/form">from</Link>
+    <Link to="/home">Home</Link>&nbsp;&nbsp;
+    <Link to="/aboutus">aboutus</Link>&nbsp;&nbsp;
+    <Link to="/contact">contact</Link>&nbsp;&nbsp;
+    <Link to="/country">country</Link>&nbsp;&nbsp;
+    <Outlet></Outlet>
   </div>)
-  
 }
 
 export default App;
