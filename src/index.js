@@ -7,10 +7,7 @@ import {
     RouterProvider,
   } 
   from "react-router-dom";
-  import Home from './home';
-import Country from './country';
-import Contact from './contact';
-import Aboutus from './aboutus';
+ 
 import Forms from './formik';
   const router = createBrowserRouter
   ( [{
@@ -19,25 +16,8 @@ import Forms from './formik';
   },
     {
       path:"/form",
-      element:<Forms></Forms> ,   
-     },
-      
-      {
-        path:"/home",
-        element:<Home></Home>
-      } ,
-      {
-        path:"/contact",
-        element:<Contact></Contact>
-      } ,
-      {
-        path:"/country",
-        element:<Country></Country>
-      } ,
-      {
-        path:"/aboutus",
-        element:<Aboutus></Aboutus>
-    }]);
+      element:<Forms></Forms>    
+     }]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

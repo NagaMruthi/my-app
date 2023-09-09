@@ -38,7 +38,6 @@ function Forms(){
                             <b>{fobj.touched.email && fobj.errors && fobj.errors.email} </b><br />
                             <button onClick={Dfg}>add</button>
                     </form>
-                    
                 )
             }
         }
