@@ -2,10 +2,8 @@ import { Link, Outlet } from "react-router-dom";
 import React from "react";
 function App(){
     return(
-  <div style={{border:"2px solid "}}>
-    <Link to="/">welcome</Link>&nbsp;&nbsp;
-     &nbsp;&nbsp;
-     <Link to="/form">from</Link>
+  <div>
+     <Link to="/form">Please Click</Link>
     <Outlet></Outlet>
   </div>)
 }

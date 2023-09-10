@@ -1,4 +1,4 @@
- import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,16 +8,17 @@ import {
   } 
   from "react-router-dom";
  
-import Forms from './formik';
+import Form from './form';
   const router = createBrowserRouter
   ( [{
     path:"/",
-    element:<App></App>
-  },
+    element:<App></App>,
+    children:[
     {
       path:"/form",
-      element:<Forms></Forms>    
-     }]);
+      element:<Form></Form>    
+     }]
+    }]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
