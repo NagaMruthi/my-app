@@ -7,18 +7,23 @@ import {
     RouterProvider,
   } 
   from "react-router-dom";
- 
-import Form from './form';
+import Card from './api';
+import Detailes from './detailes';
   const router = createBrowserRouter
   ( [{
     path:"/",
     element:<App></App>,
-    children:[
-    {
-      path:"/form",
-      element:<Form></Form>    
-     }]
-    }]);
+  children:[
+  {
+      path:"/country",
+    element:<Card/>,
+    
+    children:[{
+      path:"/country/detailes/:cname",
+      element:<Detailes/>,
+    }],
+  }],
+  }]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

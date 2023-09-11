@@ -1,11 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 function App(){
     return(
-  <div>
-     <Link to="/form">Please Click</Link>
+   <div>
+    <Link to="/country">on country</Link>
     <Outlet></Outlet>
   </div>)
 }
-
 export default App;
