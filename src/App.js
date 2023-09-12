@@ -1,10 +1,13 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
-function App(){
+import { Provider, } from "react-redux";
+import store from "./store/store";
+import Counter from "./counter";
+import TodoList from "./todo.jsx"
+function App(){ 
     return(
-   <div>
-    <Link to="/country">on country</Link>
-    <Outlet></Outlet>
-  </div>)
+        <Provider store={store}>
+            <Counter></Counter>
+            <TodoList></TodoList>
+        </Provider>)
 }
 export default App;

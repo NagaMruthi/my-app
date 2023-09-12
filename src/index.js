@@ -7,22 +7,10 @@ import {
     RouterProvider,
   } 
   from "react-router-dom";
-import Card from './api';
-import Detailes from './detailes';
   const router = createBrowserRouter
   ( [{
     path:"/",
     element:<App></App>,
-  children:[
-  {
-      path:"/country",
-    element:<Card/>,
-    
-    children:[{
-      path:"/country/detailes/:cname",
-      element:<Detailes/>,
-    }],
-  }],
   }]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
