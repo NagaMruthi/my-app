@@ -13,4 +13,5 @@ function TodoList(props){
         })}</ul>
     </div>)
 }
-export default connect(function(store){return store})(TodoList);
+export default connect(
+    function(state){return state})(TodoList);
