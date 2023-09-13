@@ -1,13 +1,13 @@
-import React from "react";
-import { Provider, } from "react-redux";
-import store from "./store/store";
-import TodoList from "./todo"
-import Counter from "./counter";
+import { Provider } from "react-redux";
+import Count from "./features/counter/count";
+import { store } from "./app/store";
+import Todolist from "./features/todo/Todo";
 function App(){ 
     return(
         <Provider store={store}>
-            <Counter></Counter>
-              <TodoList></TodoList>
-        </Provider>)
+            <h1 className="my">welcome</h1>
+            <div style={{border:"3px solid black",margin:"10px",padding:"10px"}}>
+        <Count></Count>
+        <Todolist></Todolist></div></Provider>)
 }
 export default App;
