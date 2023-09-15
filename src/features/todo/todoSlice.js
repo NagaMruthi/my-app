@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 const initialState={
-    todo:["car", "bike"]
+    todo:[],
 }
 export const todoSlice= createSlice({
 name:"todo",
@@ -10,7 +10,7 @@ add:(state,action)=>{
 state.todo.push(action.payload)
 },
 delt:(state,action)=>{
-    state.todo.splice(action.payload,1)
+    state.todo.splice(action.payload,1);
 }
 }
 })
