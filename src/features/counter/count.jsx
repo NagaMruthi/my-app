@@ -6,7 +6,7 @@ function Count(){
         return state.c
     })
     var dispatch=useDispatch();
-    console.log(count)
+    console.log(count); 
     return(<div>
         <h1>counter::{count}</h1>
         <button onClick={()=>{dispatch(increment())}}>increment</button>&nbsp;&nbsp;&nbsp;
@@ -14,4 +14,4 @@ function Count(){
         <button onClick={()=>{dispatch(reset())}}>reset</button>
     </div>)
 }
-export default Count;
+export default Count; 
