@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "title": "angula",
+      "author": "maruthi",
+      "id": 4,
+      "type2": "offline",
+      "type1": "online"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

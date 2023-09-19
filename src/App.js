@@ -1,16 +1,18 @@
-import Country from './featues/country/countrie';
-import { Provider } from 'react-redux';
-import { store } from './store/store';
-import Header from './shared/header';
-import {Outlet} from "react-router-dom"
+import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./store";
+import { Link, Outlet } from "react-router-dom";
 function App(){
   return (
-    <div>
     <Provider store={store}>
-      <Header></Header>
+      <div>
+      <Link to="/">welcome</Link>
+      <Link to="/posts">posts</Link>
+      <div>
         <Outlet></Outlet>
-        </Provider>
-    </div>
+      </div>
+      </div>
+    </Provider>
   )
 }  
 export default App;
