@@ -33,7 +33,7 @@ function Books(){
 
     };
     function up(){
-        axios.put("http://localhost:4000/books/"+book1.id,book1).then((res)=>{
+        axios.put("http://localhost:4000/books/"+edit2.id,edit2).then((res)=>{
             alert("hi")
             genBooks();
         })
@@ -55,10 +55,10 @@ function Books(){
         edits&&(
         <div>
         <label>Title:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" value={edit2.title}onChange={(e)=>{setBook1({...book1,title:e.target.value})}}></input>
+        <input type="text" value={edit2.title}onChange={(e)=>{setEdit2({...book1,title:e.target.value})}}></input>
         <br></br>
         <label>Author:</label>
-        <input type="text" value={edit2.author} onChange={(e)=>{setBook1({...book1,author:e.target.value})}}></input><br></br>
+        <input type="text" value={edit2.author} onChange={(e)=>{setEdit2({...book1,author:e.target.value})}}></input><br></br>
         <button onClick={()=>{up()}}>update</button>
         </div>)
         
@@ -70,7 +70,7 @@ function Books(){
                     <h1>{g.title}</h1>
                     <h2>{g.author}</h2>
                     <button onClick={()=>{del(g.id)}}>delete</button>
-                    <button  onClick={()=>{e(g)}}>Edit</button>
+                    <button onClick={()=>{e(g)}}>Edit</button>
                     </div>
                     )
                 })

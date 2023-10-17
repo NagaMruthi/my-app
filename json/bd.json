@@ -1,0 +1,29 @@
+{
+  "Books": [
+    {
+      "title": "angular",
+      "author": "maruthi",
+      "id": 2
+    },
+    {
+      "title": "angularjs",
+      "author": "maruthi",
+      "id": 3
+    },
+    {
+      "title": "reactjs",
+      "author": "maruthi",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
