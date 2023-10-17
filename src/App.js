@@ -6,13 +6,6 @@ function App(){
         <div>
             <h1>welcome</h1>
             {/* <Books></Books> */}
-            <Formik
-            initialValues={{email:'',password:"",name:'',age:""}}
-            onSubmit={(Values)=>{
-                Values.
-            }}
-            >
-            </Formik>
         </div>
     )
 }
