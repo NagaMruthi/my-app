@@ -1,13 +1,33 @@
 import React from 'react';
+import Main from './main';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} 
+from "react-router-dom";
+import FormValidations from './form';
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App></App>
+  },
+  {
+    path:"/main",
+    element:<Main></Main>
+  },
+  {
+    path:"/form",
+    element:<FormValidations></FormValidations>
+  }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+]);
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -1,10 +1,10 @@
 import React from "react";
-import FormValidations from "./form";
 function App(){
   return (
     <div className="my">
     <h1>Form Validations</h1>
-    <FormValidations></FormValidations>
+    <a href="/form">FormValidations</a>
+    <a href="/main">Main</a>
     </div>
   )
 }  
