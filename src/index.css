@@ -2,4 +2,11 @@
     border:1px solid;
   margin:10px;
   padding:10px;
+  background-color: aqua;
+}
+.in{
+  background-color: red;
+}
+.dc{
+  background-color: green;
 }
