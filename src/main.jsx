@@ -1,6 +1,6 @@
 import React from "react";
 function Main(){
     return(<div>
-welcome to react</div>)
+Welcome To React</div>)
 }
 export default Main;
