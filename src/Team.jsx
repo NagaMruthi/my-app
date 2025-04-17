@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, { memo } from 'react';
 function Team(props) {
+  console.log("hi")
   return(
       <div className='my'>
         <h1>{props.tname}</h1>
@@ -12,5 +13,5 @@ function Team(props) {
       </div>
   )
 }
-export default Team;
+export default memo( Team);
 
